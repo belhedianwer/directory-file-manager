@@ -64,4 +64,4 @@ Contributions to this script are welcome. Feel free to submit a pull request or 
 
 ## Credits
 
-This script was created by [Your Name Here](https://github.com/yourname).
+This script was created by [Anwer Awled Belhedi](https://github.com/belhedianwer).
