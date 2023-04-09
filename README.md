@@ -4,7 +4,15 @@ This Bash script allows you to add or remove files in a directory and its subdir
 
 ## Usage
 
-To use the script, simply run the following command:
+### Running the script
+
+Before running the script for the first time, you need to make it executable using the following command:
+
+```
+chmod +x script.sh
+```
+
+To use the script, run the following command:
 
 ```
 ./script.sh [OPTIONS] <ROOT_PATH>
@@ -19,6 +27,32 @@ Replace `[OPTIONS]` with any of the available options for the script, such as:
 - `-v`: Verbose mode: show details of each action.
 
 Replace `<ROOT_PATH>` with the root path of the directory you want to modify.
+
+### Using the script globally
+
+To add a command "dfm" to execute your script, you can create an alias for your script in your bash profile or add it to your system's PATH. Here's an example of how to add an alias for your script:
+
+1. Open your bash profile in a text editor. On Linux and macOS, the file is usually located at `~/.bashrc` or `~/.bash_profile`.
+
+2. Add the following line to the file:
+
+   ```
+   alias dfm='/path/to/your/script.sh'
+   ```
+
+   Replace `/path/to/your/script.sh` with the actual path to your script.
+
+3. Save the file and exit the text editor.
+
+4. Reload your bash profile by running `source ~/.bashrc` or `source ~/.bash_profile`, depending on which file you edited.
+
+After you've added the alias, you can use the command `dfm` followed by the options you want to pass to your script. For example:
+
+```
+dfm -f example.txt -e excluded my_directory
+``` 
+
+This will run the script with the options `-f example.txt -e excluded` and the root path `my_directory`.
 
 ## Examples
 
