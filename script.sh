@@ -45,6 +45,15 @@ function usage {
   exit "$1"
 }
 
+# Logo
+printf "${COLOR_YELLOW}  ___  _            _                  ___ _ _       __  __\n${COLOR_RESET}"
+printf "${COLOR_YELLOW} |   \\(_)_ _ ___ __| |_ ___ _ _ _  _  | __(_) |___  |  \\/  |__ _ _ _  __ _ __ _ ___ _ _\n${COLOR_RESET}"
+printf "${COLOR_YELLOW} | |) | | '_/ -_) _|  _/ _ \\ '_| || | | _|| | / -_) | |\\/| / _\` | ' \\/ _\` / _\` / -_) '_|\n${COLOR_RESET}"
+printf "${COLOR_YELLOW} |___/|_|_| \\___\\__|\\__\\___/_|  \\_, | |_| |_|_\\___| |_|  |_|\\__,_|_||_\\__,_\\__, \\___|_|\n${COLOR_RESET}"
+printf "${COLOR_YELLOW}                                |__/                                        |___/\n${COLOR_RESET}"
+
+printf "\n\n"
+
 # Parse command line arguments using getopts
 root_path=""
 add_to_root=0
@@ -109,6 +118,8 @@ if [[ "$add_to_root" == 1 ]]; then
   modify_files "$root_path" "${files_to_modify[@]}"
 fi
 
+printf "\n\n"
+
 # Check if the rm command was successful
 if [[ "$delete_files" == 1 ]]; then
   if [[ $? -eq 0 ]]; then
@@ -120,3 +131,5 @@ if [[ "$delete_files" == 1 ]]; then
 else
   printf "${COLOR_GREEN}Success:${COLOR_RESET} Files added to %s\n" "$root_path"
 fi
+
+printf "\n"
